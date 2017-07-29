@@ -1,0 +1,29 @@
+{% extends 'auth/views/layout.twig' %}
+{% block contents %}
+<div class="row">
+    <div class="col-sm-6">
+        <form method="post" action="{{ context.url.route('login') }}">
+            <div class="form-group">
+                <label for="input-username">Username / Email</label>
+                <input type="text" name="username" class="form-control" id="input-username" placeholder="Username / Email">
+            </div>
+            <div class="form-group">
+                <label for="input-password">Password</label>
+                <input type="password" name="password" class="form-control" id="input-password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login" />
+                <a href="{{ context.url.route('signup') }}" class="btn btn-success">Sign Up</a>
+                <a class="float-right" href="{{ context.url.route('get-forgot') }}">Forgot password</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6">
+        <div class="jumbotron">
+            <h1><span class="fa fa-code"></span> <strong>Dev</strong>.life<span class="fa fa-code"></span></h1>
+            <p>I am a simple developer. When I get bored, I code, when there's nothing more to code, I get bored. <br>
+            - Developer life</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

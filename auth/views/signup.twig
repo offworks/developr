@@ -1,0 +1,35 @@
+{% extends 'auth/views/layout.twig' %}
+{% block contents %}
+<div class="row">
+    <div class="col-sm-6">
+        <div class="jumbotron">
+            <h1><span class="fa fa-code"></span> Join Us!<span class="fa fa-code"></span></h1>
+            <p>It's a social network for developers. We promise we won't waste your time. We'll just feed you with your preferences. We promise!</p>
+            <p>Plus, it's free! We don't take your credit card. <br /> <span style="font-size: 0.8em;">p/s : you can still <a href="#">donate</a> if you want</span>.</p>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h4>Create a dev.life account</h4>
+        <form method="post" action="{{ context.url.route('signup') }}">
+            <div class="form-group">
+                <label for="input-username">Username</label>
+                <input type="text" name="username" class="form-control" id="input-username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="input-email">Email Address</label>
+                <input type="email" name="email" class="form-control" id="input-email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+                <label for="input-password">Password</label>
+                <input type="password" name="password" class="form-control" id="input-password" placeholder="Password">
+            </div>
+            <hr>
+            <p>By creating this account you're agreeing to our <a href="javascript:;" onclick="alert('Terms and policy privacy\nYou use this site for the goodness of mankind.');">Terms and privacy policy</a></p>
+            <hr />
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Sign Up" />
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
